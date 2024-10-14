@@ -114,5 +114,20 @@ public:
 
 
 int main() {
+    
+    srand(time(0));  
 
+    DoublyLinkedList list;
+    int size = rand() % (MAX_LS - MIN_LS + 1) + MIN_LS;  
+    for (int i = 0; i < size; ++i) {
+        Goat goat;  
+        list.push_back(goat);  
+    }
+
+    // print forward and backward
+    cout << "Forward:\n";
+    list.print();
+    cout << "\nBackward:\n";
+    list.print_reverse();
+    return 0;
 }
